@@ -4,6 +4,7 @@ Thank for the script ya nurutomo:v
 ### 🤔 Bot Ga Respon?
 ```bash
 npm i @adiwajshing/baileys@latest
+```
 
 ### FOR TERMUX USER
 ```bash
