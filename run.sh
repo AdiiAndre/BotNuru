@@ -1,2 +1,4 @@
+clear
+
 echo "Starting BotNuru"
-node .
+npm start
