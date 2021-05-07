@@ -54,8 +54,10 @@ Btw Scan qr
 ##### Bot : [`Nomor Bot`](wa.me/60199782326) 
 
 ----------------
-Thanks to :
+## Thanks to :
+```bash
 Fazone
 Api Xteam
 Adii
 Dan creator bots lain lain
+```
