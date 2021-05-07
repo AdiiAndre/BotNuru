@@ -6,6 +6,15 @@ Thank for the script ya nurutomo:v
 npm i @adiwajshing/baileys@latest
 ```
 
+### 1 Prefix!
+```bash
+The prefix is #
+If you want to change prefix
+Open main.js line 27
+global.prefix = new RegExp('^[' + (opts['prefix'] || '#').replace(/[|\\{}()[\]^$+*?.\-\^]/g, '\\$&') + ']')
+```
+
+
 ### FOR TERMUX USER
 ```bash
 > pkg update && pkg upgrade
