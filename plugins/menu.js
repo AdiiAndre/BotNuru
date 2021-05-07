@@ -53,9 +53,10 @@ let handler  = async (m, { conn, usedPrefix: _p }) => {
       'internet': 'Internet',
       'nulis': 'MagerNulis & Logo',
       'downloader': 'Downloader',
+      'audio': 'Audio',
       'tools': 'Tools',
       'fun': 'Fun',
-      'database': 'Database',
+      'database': 'STORAGE',
       'jadibot': 'Jadi Bot',
       'owner': 'Owner',
       'host': 'Host',
@@ -85,16 +86,21 @@ let handler  = async (m, { conn, usedPrefix: _p }) => {
     conn.menu = conn.menu ? conn.menu : {}
     let before = conn.menu.before || `
 
-┏━━⊱  *Info Bot* 」⊰━━┓
+┏━━⊱  *Info Bot* ⊰━━┓
 ┣⊱ Bot Name : ${conn.user.name} 
-┣⊱ Prefix : Multi Prefix - 「 %p 」
+┣⊱ Prefix : 1 Prefix Bot「 %p 」
 ┣⊱ Uptime : %uptime
 ┣⊱ Real Uptime : %muptime
 ┣⊱ Total User in Database : %totalreg
-┣⊱ Registered User : %rtotalreg 
-┣⊱ Self? : undefined
-┣⊱ Public? : undefined
+┣⊱ Registered User : %rtotalreg
+┣⊱ Github : %github
 ┗━━━━━━━━━━━━━━━━
+┏━━⊱ *What's New on Bot?* ⊰━━┓
+┣⊱ 1 Prefix
+┣⊱ Fixed some bugs
+┣⊱ Fixed some features
+┗━━━━━━━━━━━━━━━━ 
+
 ┏━━⊱ *Info User* ⊰━━┓
 ┣⊱ Name : %name
 ┣⊱ Limit : *%limit Limit*
@@ -108,9 +114,17 @@ let handler  = async (m, { conn, usedPrefix: _p }) => {
 ┣⊱ Tanggal Islam: *%dateIslamic*
 ┣⊱ Waktu: *%time*
 ┗━━━━━━━━━━━━━━━━
+
+┏━━⊱ *Contributors* ⊰━━┓
+┣⊱ Adii
+┣⊱ Nurutomo 
+┣⊱ Api Xteam (api.xteam.xyz)
+┣⊱ Fazone
+┣⊱ And all of Creator bots
+┗━━━━━━━━━━━━━━━━
 `
-    let header = conn.menu.header || '┏━━⊱ *%category* ⊰━━┓'
-    let body   = conn.menu.body   || '┣⊱ ✓ %cmd%islimit'
+    let header = conn.menu.header || '┏━━⊱ _%category_ ⊰━━┓'
+    let body   = conn.menu.body   || '┣⊱ Command  ```%cmd%islimit```'
     let footer = conn.menu.footer || '┗━━━━━━━━━━━━━━━━\n'
     let after  = conn.menu.after  || (conn.user.jid == global.conn.user.jid ? '' : `Powered by https://wa.me/${global.conn.user.jid.split`@`[0]}`) + `\n*%npmname@^%version*\n\`\`\`\%npmdesc\`\`\``
     let _text  = before + '\n'
